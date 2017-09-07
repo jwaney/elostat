@@ -1,2 +1,2 @@
-# overunder
+# EloStat
 Website predicting baseball outcomes
