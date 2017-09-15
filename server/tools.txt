@@ -1,0 +1,5 @@
+Tools Needed:
+# Please add any tools you think we are going to be using. We will discuss it during next meeting.
+Vagrant.
+Django.
+Some python bot framework available.
