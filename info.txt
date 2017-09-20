@@ -1,0 +1,6 @@
+Tools:
+Docker or Vagrant
+Scrapy to build the bots
+Django website framework
+TensorFlow (Feature)
+
