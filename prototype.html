@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.visitorteam {
+    width: 49%;
+    float: left;
+    text-align:center;
+}
+.hometeam{
+    width: 49%;
+    float: right;
+    text-align:center;
+    
+}
+
+.team-logo{
+    height:45px;
+    width:45px;
+    padding-top:10px;
+}
+</style>
+</head>
+<body>
+<div align="center">
+<h1>EloStat<vr></h1>
+<hr width="50%">
+<button type="button"
+onclick="document.getElementById('output').innerHTML = 'NY Yankees - 55%'">
+Generate Outcome</button>
+<div style="width:50%;">
+    
+    <div><h2>Yankee Stadium</h2></div>
+    <div>
+        <div class="visitorteam"><img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_bos_79x76.jpg"><h4>Boston Red Sox</h4></div>
+        <div class="hometeam"><img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_nyy_79x76.jpg"><h4>NY Yankees</h4></div>
+        <div></div>
+    </div> 
+    <div>
+    </div>
+</div>
+<b><p id="output"></p></b>
+
+
+</div>
+</body>
+</html> 
