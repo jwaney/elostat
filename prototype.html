@@ -1,47 +1,148 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-.visitorteam {
-    width: 49%;
-    float: left;
-    text-align:center;
-}
-.hometeam{
-    width: 49%;
-    float: right;
-    text-align:center;
-    
-}
-
-.team-logo{
-    height:45px;
-    width:45px;
-    padding-top:10px;
-}
-</style>
-</head>
-<body>
-<div align="center">
-<h1>EloStat<vr></h1>
-<hr width="50%">
-<button type="button"
-onclick="document.getElementById('output').innerHTML = 'NY Yankees - 55%'">
-Generate Outcome</button>
-<div style="width:50%;">
-    
-    <div><h2>Yankee Stadium</h2></div>
-    <div>
-        <div class="visitorteam"><img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_bos_79x76.jpg"><h4>Boston Red Sox</h4></div>
-        <div class="hometeam"><img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_nyy_79x76.jpg"><h4>NY Yankees</h4></div>
-        <div></div>
-    </div> 
-    <div>
-    </div>
-</div>
-<b><p id="output"></p></b>
-
-
-</div>
-</body>
-</html> 
+	<head>
+		<style>
+		.visitorteam {
+		width: 49%;
+		float: left;
+		text-align:center;
+		}
+		.hometeam{
+		width: 49%;
+		float: right;
+		text-align:center;
+		
+		}
+		.team-logo{
+		width:60px;
+		padding-top:10px;
+		}
+		.main-table{}
+		#left, #right{
+		float: left;
+		width: 49%;
+		}
+		
+		#right{
+		float: right;
+		width: 49%;
+		}
+		.left-side, .right-side{
+		border: 1px solid black;
+		margin: 10px;
+		}
+		.teamname{
+		line-height: 45px;
+		}
+		.rows{
+		float: left;
+		width:20%;
+		}
+		.clearfix{
+		clear: both;
+		}
+		</style>
+	</head>
+	<body>
+		<div align="center">
+			<h1>EloStat<vr></h1>
+			<hr width="50%">
+			<button type="button"
+			onclick="document.getElementById('output').innerHTML = 'NY Yankees - 55%'">
+			Generate Outcome</button>
+			<div style="width:50%;">
+				<div><h2>Yankee Stadium</h2></div>
+				<div>
+					<div class="visitorteam">
+						<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_bos_79x76.jpg">
+						<h4>Boston Red Sox</h4>
+					</div>
+					<div class="hometeam">
+						<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_nyy_79x76.jpg">
+						<h4>NY Yankees</h4>
+					</div>
+					<div class="clearfix"></div><hr>
+					<b><p id="output"></p></b><hr>
+					<br>
+					<!-- Main Table for the teams -->
+					<div class="main-table">
+						<div class="team-rows">
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_laa_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Angels</div>
+							</div>
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_oak_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Athletics</div>
+							</div>
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_hou_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Astros</div>
+							</div>
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_tor_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Blue Jays</div>
+							</div>
+						</div>
+						<div class="team-rows">
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_atl_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Braves</div>
+							</div>
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_mil_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Brewers</div>
+							</div>
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_stl_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Cardinals</div>
+							</div>
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_chc_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Cubs</div>
+							</div>
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_ari_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Diamondbacks</div>
+							</div>
+						</div>
+						<div class="team-rows">
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_la_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Dodgers</div>
+							</div>
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_sf_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Giants</div>
+							</div>
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_cle_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Indians</div>
+							</div>
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_sea_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Mariners</div>
+							</div>
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_mia_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Marlins</div>
+							</div>
+						</div>
+						<div class="team-rows">
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_nym_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Mets</div>
+							</div>
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_was_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Nationals</div>
+							</div>
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_bal_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Orioles</div>
+							</div>
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_sd_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Padres</div>
+							</div>
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_phi_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Phillies</div>
+							</div>
+						</div>
+						<div class="team-rows">
+							<div class="rows">
+								<img class="team-logo" src="http://mlb.mlb.com/mlb/images/team_logos/logo_pit_79x76.jpg"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Pirates</div>
+							</div>
+							</div>
+						</div>
+						<div class="team-rows">
+						</div>
+						<div class="clearfix"></div></div>
+					</div>
+				</div>
+				
+			</div>
+		</body>
+	</html>
