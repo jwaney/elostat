@@ -48,99 +48,129 @@
 	</head>
 	<body>
 		<div align="center"><a href="https://elotast.com"><img id="logo" src="elostat.png"></a>
-			<hr width="50%">
-			<button type="button"
-			onclick="document.getElementById('output').innerHTML = 'NY Yankees - 55%'">
-			Generate Outcome</button>
-			<div style="width:50%;">
-				<div><h2>Yankee Stadium</h2></div>
-				<div>
-					<div class="visitorteam">
-						<h4>Boston Red Sox</h4>
+		<hr width="50%">
+		<button type="button"
+		onclick="document.getElementById('output').innerHTML = 'NY Yankees - 55%'">
+		Generate Outcome</button>
+		<div style="width:50%;">
+			<div><h2>Yankee Stadium</h2></div>
+			<div>
+				<div class="visitorteam">
+					<img class="team-logo" src="baseball.png">
+					<h4>Boston Red Sox</h4>
+				</div>
+				<div class="hometeam">
+					<img class="team-logo" src="baseball.png">
+					<h4>NY Yankees</h4>
+				</div>
+				<div class="clearfix"></div><hr>
+				<b><p id="output"></p></b><hr>
+				<br>
+				<!-- Main Table for the teams -->
+				<div class="main-table">
+					<div class="team-rows">
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Angels</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Athletics</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Astros</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Blue Jays</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Pirates</div>
+						</div>
 					</div>
-					<div class="hometeam">
-						<h4>NY Yankees</h4>
+					<div class="team-rows">
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Braves</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Brewers</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Cardinals</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Cubs</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>D-Backs</div>
+						</div>
 					</div>
-					<div class="clearfix"></div><hr>
-					<b><p id="output"></p></b><hr>
-					<br>
-					<!-- Main Table for the teams -->
-					<div class="main-table">
-						<div class="team-rows">
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Angels</div>
-							</div>
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Athletics</div>
-							</div>
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Astros</div>
-							</div>
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Blue Jays</div>
-							</div>
-														<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Pirates</div>
-							</div>
+					<div class="team-rows">
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Dodgers</div>
 						</div>
-						<div class="team-rows">
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Braves</div>
-							</div>
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Brewers</div>
-							</div>
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Cardinals</div>
-							</div>
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Cubs</div>
-							</div>
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>D-Backs</div>
-							</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Giants</div>
 						</div>
-						<div class="team-rows">
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Dodgers</div>
-							</div>
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Giants</div>
-							</div>
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Indians</div>
-							</div>
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Mariners</div>
-							</div>
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Marlins</div>
-							</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Indians</div>
 						</div>
-						<div class="team-rows">
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Mets</div>
-							</div>
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Nationals</div>
-							</div>
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Orioles</div>
-							</div>
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Padres</div>
-							</div>
-							<div class="rows">
-								<div class="teamname"><span><input id="checkBox" type="checkbox"></span>Phillies</div>
-							</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Mariners</div>
 						</div>
-						<div class="team-rows">
-
-							</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Marlins</div>
 						</div>
-						<div class="team-rows">
+					</div>
+					<div class="team-rows">
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Mets</div>
 						</div>
-						<div class="clearfix"></div></div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Nationals</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Orioles</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Padres</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Phillies</div>
+						</div>
+					</div>
+					<div class="team-rows">
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Rangers</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Rays</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Reds</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Red Sox</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Rockies</div>
+						</div>
+					</div>
+					<div class="team-rows">
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Royals</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Tigers</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Twins</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>Yankees</div>
+						</div>
+						<div class="rows">
+							<img class="team-logo" src="baseball.png"><div class="teamname"><span><input id="checkBox" type="checkbox"></span>White Sox</div>
+						</div>
+					</div>
+					<div class="team-rows">
 					</div>
 				</div>
 				<div class="team-rows">
@@ -148,7 +178,12 @@
 				<div class="clearfix"></div></div>
 			</div>
 		</div>
-		
+		<div class="team-rows">
+		</div>
+		<div class="clearfix"></div></div>
 	</div>
+</div>
+
+</div>
 </body>
 </html>
