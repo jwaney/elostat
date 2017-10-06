@@ -12,5 +12,5 @@ if command -v pip3 > /dev/null 2>&1; then
 	echo "Pip3 already installed.\n"
 else
 	sudo apt install python3-pip -y
-	pip install Django
+	pip install virtualenv
 fi
