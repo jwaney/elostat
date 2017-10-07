@@ -1,9 +1,10 @@
 from django.db import models
 
-
 class Game(models.Model):
-	date 	      = models.DateField()
+	date 	       = models.DateField()
+	game_id	       = models.IntegerField()
 
+	score_away     = models.IntegerField()
         team_away      = models.CharField()
         away_pinnacle  = models.IntegerField()
         away_5dimes    = models.IntegerField()
@@ -16,6 +17,7 @@ class Game(models.Model):
         away_justbet   = models.IntegerField()
         away_betdsi    = models.IntegerField()
 
+	score_home     = models.IntegerField()
         team_home      = models.CharField()
         home_pinnacle  = models.IntegerField()
         home_5dimes    = models.IntegerField()
@@ -27,3 +29,6 @@ class Game(models.Model):
         home_youwager  = models.IntegerField()
         home_justbet   = models.IntegerField()
         home_betdsi    = models.IntegerFiels()
+
+	def __str__(self):
+		return self.game_id
