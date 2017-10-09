@@ -18,39 +18,69 @@ games = Game
 outcomes = OutCome
 
 i = 0
-dic = []
+g_td = []
+nycl = []
 
+# gets teams for day d
 for i in range(0,len(games.objects.all())):
 	if((games.objects.all()[i].date) == d):
-		dic.append(games.objects.all()[i])
+		g_td.append(games.objects.all()[i])
 	i += 1
 
+# gets all of A v. B games
+# NYY -> A, CLE -> B
+i = 0
+for i in range(0, len(games.objects.all())):
+	if(((games.objects.all()[i].team_home) == "NYY" and (games.objects.all()[i].team_away) == "CLE") or
+		((games.objects.all()[i].team_home) == "CLE" and (games.objects.all()[i].team_away) == "NYY")):
+		nycl.append(games.objects.all()[i])
+	i += 1
 
-for i in range(0, len(dic)):
-	print(str(dic[i]) + " away:" + str(dic[i].score_away) + " home:" + str(dic[i].score_home))
+"""
+	To be used in future codes
+"""	
+# CLE = 0
+# NYY = 0
+# for i in range(0, len(nycl)):
+# 	print(str(nycl[i]) + " away:" + str(nycl[i].score_away) + " home:" + str(nycl[i].score_home))
+# 	if("CLE" == nycl[i].team_home):
+# 		if(nycl[i].score_home > nycl[i].score_away):
+# 			CLE += 1
+# 		else: NYY += 1
+# 	else:
+# 		if(nycl[i].score_home > nycl[i].score_away):
+# 			NYY += 1
+# 		else: CLE += 1
 
-	print(dic[i].score_away)
-	print(dic[i].team_away)
-	print(dic[i].away_pinnacle)
-	print(dic[i].away_5dimes)
-	print(dic[i].away_bookmaker)
-	print(dic[i].away_betonline)
-	print(dic[i].away_bovada)
-	print(dic[i].away_heritage)
-	print(dic[i].away_intertops)
-	print(dic[i].away_youwager)
-	print(dic[i].away_justbet)
-	print(dic[i].away_betdsi)
+# print("CLE: " + str(CLE))
+# print("NYY: " + str(NYY))
 
-	print(dic[i].score_home)
-	print(dic[i].team_home)
-	print(dic[i].home_pinnacle)
-	print(dic[i].home_5dimes)
-	print(dic[i].home_bookmaker)	
-	print(dic[i].home_betonline)	
-	print(dic[i].home_bovada)	
-	print(dic[i].home_heritage)	
-	print(dic[i].home_intertops)	
-	print(dic[i].home_youwager)	
-	print(dic[i].home_justbet)	
-	print(dic[i].home_betdsi)	
+# for i in range(0, len(g_td)):
+# 	print(str(g_td[i]) + " away:" + str(g_td[i].score_away) + " home:" + str(g_td[i].score_home))
+
+
+# 	print(g_td[i].score_away)
+# 	print(g_td[i].team_away)
+# 	print(g_td[i].away_pinnacle)
+# 	print(g_td[i].away_5dimes)
+# 	print(g_td[i].away_bookmaker)
+# 	print(g_td[i].away_betonline)
+# 	print(g_td[i].away_bovada)
+# 	print(g_td[i].away_heritage)
+# 	print(g_td[i].away_intertops)
+# 	print(g_td[i].away_youwager)
+# 	print(g_td[i].away_justbet)
+# 	print(g_td[i].away_betdsi)
+
+# 	print(g_td[i].score_home)
+# 	print(g_td[i].team_home)
+# 	print(g_td[i].home_pinnacle)
+# 	print(g_td[i].home_5dimes)
+# 	print(g_td[i].home_bookmaker)	
+# 	print(g_td[i].home_betonline)	
+# 	print(g_td[i].home_bovada)	
+# 	print(g_td[i].home_heritage)	
+# 	print(g_td[i].home_intertops)	
+# 	print(g_td[i].home_youwager)	
+# 	print(g_td[i].home_justbet)	
+# 	print(g_td[i].home_betdsi)	
