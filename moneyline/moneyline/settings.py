@@ -9,6 +9,16 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
+import os
+import sys
+
+#sys.path.append('/home/elo/project/elostat')
+DJANGO_PROJECT_PATH = '/home/elo/project/elostat/elostat'
+DJANGO_SETTINGS_MODULE = 'elostat.settings'
+sys.path.insert(0,DJANGO_PROJECT_PATH)
+os.environ['DJANGO_SETTINGS_MODULE'] = DJANGO_SETTINGS_MODULE
+import django
+django.setup()
 BOT_NAME = 'moneyline'
 
 SPIDER_MODULES = ['moneyline.spiders']
@@ -64,9 +74,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'moneyline.pipelines.MoneylinePipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'moneyline.pipelines.MoneylinePipeline': 1000,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
