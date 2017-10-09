@@ -6,8 +6,6 @@ from outcomes.models import OutCome
 import datetime
 from datetime import date
 
-def redirection(request):
-	return redirect("http://192.168.56.10:8000/outcomes/20171007")
 
 def homepage(request, date_game):
 	all_games = OutCome.objects.all()
