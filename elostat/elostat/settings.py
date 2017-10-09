@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -31,6 +32,7 @@ ALLOWED_HOSTS = ["192.168.56.10"]
 # Application definition
 
 INSTALLED_APPS = [
+    'outcomes.apps.OutcomesConfig',
     'scrapeSBRodds.apps.ScrapesbroddsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -76,8 +78,12 @@ WSGI_APPLICATION = 'elostat.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'elostat',
+        'USER': 'elo',
+        'PASSWORD': 'elo12345',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
