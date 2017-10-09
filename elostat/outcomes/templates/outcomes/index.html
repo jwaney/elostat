@@ -56,13 +56,13 @@
 			<div class="visitorteam">
 					<img class="team-logo" src="https://elostat.com/baseball.png">
 					<h4>{{ game.team_away }}</h4>
-					<div><b>{{ game.prediction }}<b></div>
+					<!-- <div><b>{{ game.prediction }}<b></div> -->
 				</div>
 				<div class="hometeam">
 					<img class="team-logo" src="https://elostat.com/baseball.png">
 					<h4>{{ game.team_home }}</h4>
-					<div><b>{{ game.prediction }}<b></div>
 				</div>
+					<div align="center"><b>{{ game.team_away }} at {{ game.team_home }} to {{ game.pred_away }}<b></div>
 				<div class="clearfix"></div><hr>
 				
 				<br>

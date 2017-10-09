@@ -15,26 +15,26 @@ from datetime import date
 d = datetime.date(2017,10,8)
 
 games = Game
-outcomes = OutCome
 
 i = 0
 g_td = []
-nycl = []
 
 # gets teams for day d
 for i in range(0,len(games.objects.all())):
-	if((games.objects.all()[i].date) == d):
-		g_td.append(games.objects.all()[i])
+	# if((games.objects.all()[i].date) == d):
+	g_td.append(games.objects.all()[i])
 	i += 1
+
+ 
 
 # gets all of A v. B games
 # NYY -> A, CLE -> B
-i = 0
-for i in range(0, len(games.objects.all())):
-	if(((games.objects.all()[i].team_home) == "NYY" and (games.objects.all()[i].team_away) == "CLE") or
-		((games.objects.all()[i].team_home) == "CLE" and (games.objects.all()[i].team_away) == "NYY")):
-		nycl.append(games.objects.all()[i])
-	i += 1
+# i = 0
+# for i in range(0, len(games.objects.all())):
+# 	if(((games.objects.all()[i].team_home) == "NYY" and (games.objects.all()[i].team_away) == "CLE") or
+# 		((games.objects.all()[i].team_home) == "CLE" and (games.objects.all()[i].team_away) == "NYY")):
+# 		nycl.append(games.objects.all()[i])
+# 	i += 1
 
 """
 	To be used in future codes
@@ -55,32 +55,25 @@ for i in range(0, len(games.objects.all())):
 # print("CLE: " + str(CLE))
 # print("NYY: " + str(NYY))
 
-# for i in range(0, len(g_td)):
+for i in range(0, len(g_td)):
 # 	print(str(g_td[i]) + " away:" + str(g_td[i].score_away) + " home:" + str(g_td[i].score_home))
-
-
-# 	print(g_td[i].score_away)
-# 	print(g_td[i].team_away)
-# 	print(g_td[i].away_pinnacle)
-# 	print(g_td[i].away_5dimes)
-# 	print(g_td[i].away_bookmaker)
-# 	print(g_td[i].away_betonline)
-# 	print(g_td[i].away_bovada)
-# 	print(g_td[i].away_heritage)
-# 	print(g_td[i].away_intertops)
-# 	print(g_td[i].away_youwager)
-# 	print(g_td[i].away_justbet)
-# 	print(g_td[i].away_betdsi)
-
-# 	print(g_td[i].score_home)
-# 	print(g_td[i].team_home)
-# 	print(g_td[i].home_pinnacle)
-# 	print(g_td[i].home_5dimes)
-# 	print(g_td[i].home_bookmaker)	
-# 	print(g_td[i].home_betonline)	
-# 	print(g_td[i].home_bovada)	
-# 	print(g_td[i].home_heritage)	
-# 	print(g_td[i].home_intertops)	
-# 	print(g_td[i].home_youwager)	
-# 	print(g_td[i].home_justbet)	
-# 	print(g_td[i].home_betdsi)	
+	away = (int(g_td[i].away_pinnacle) + int(g_td[i].away_5dimes) + int(g_td[i].away_bookmaker) +
+			int(g_td[i].away_betonline) + int(g_td[i].away_bovada) + int(g_td[i].away_heritage) +
+			int(g_td[i].away_intertops) + int(g_td[i].away_youwager) + int(g_td[i].away_justbet) +
+			int(g_td[i].away_betdsi))
+	home = (int(g_td[i].home_pinnacle) + int(g_td[i].home_5dimes) + int(g_td[i].home_bookmaker) +	
+			int(g_td[i].home_betonline) + int(g_td[i].home_bovada) + int(g_td[i].home_heritage) +
+			int(g_td[i].home_intertops) + int(g_td[i].home_youwager) + int(g_td[i].home_justbet) +
+			int(g_td[i].home_betdsi))
+	home = home / 10
+	away = away / 10
+	if(away < home):
+		o = OutCome(date=g_td[i].date, game_id=g_td[i].game_id, 
+				team_away=g_td[i].team_away, team_home=g_td[i].team_home,
+				pred_away="WIN", pred_home="LOSE")
+	else:
+		o = OutCome(date=g_td[i].date, game_id=g_td[i].game_id, 
+			team_away=g_td[i].team_away, team_home=g_td[i].team_home,
+			pred_away="LOSE", pred_home="WIN")
+	o.save()
+	i += 1	
