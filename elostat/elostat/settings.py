@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["192.168.56.10"]
 # Application definition
 
 INSTALLED_APPS = [
+    'outcomes.apps.OutcomesConfig',
     'scrapeSBRodds.apps.ScrapesbroddsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
