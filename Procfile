@@ -1,1 +1,1 @@
-web: gunicorn elostat.app --log-file -
+web: gunicorn elostat.wsgi:application --pythonpath elostat
