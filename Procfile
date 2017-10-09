@@ -1,1 +1,1 @@
-web: gunicorn elostat.wsgi -b 0.0.0.0:443
+web: gunicorn myproject.wsgi --log-file -
