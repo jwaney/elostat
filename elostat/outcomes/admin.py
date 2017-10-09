@@ -1,3 +1,4 @@
 from django.contrib import admin
+from outcomes.models import OutCome
 
-# Register your models here.
+admin.site.register(OutCome)
