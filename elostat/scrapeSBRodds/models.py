@@ -30,3 +30,5 @@ class Game(models.Model):
 	home_justbet	= models.IntegerField()
 	home_betdsi	= models.IntegerField()
 
+	def __str__(self):
+		return str(self.date) + " " + str(self.team_away) + " VS " + str(self.team_home)
