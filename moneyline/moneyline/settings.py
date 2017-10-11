@@ -13,7 +13,7 @@ import os
 import sys
 
 #sys.path.append('/home/elo/project/elostat')
-DJANGO_PROJECT_PATH = '/home/elo/project/elostat/elostat'
+DJANGO_PROJECT_PATH = '/home/krodik/www/elostat'
 DJANGO_SETTINGS_MODULE = 'elostat.settings'
 sys.path.insert(0,DJANGO_PROJECT_PATH)
 os.environ['DJANGO_SETTINGS_MODULE'] = DJANGO_SETTINGS_MODULE

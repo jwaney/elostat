@@ -46,47 +46,32 @@
 		#logo{
 			width: 150px;
 		}
+		.list-games{
+			line-height: 20px;
+			margin-bottom: 10px;
+			list-style:none;
+		}
 		</style>
 	</head>
 	<body>
 		{% load staticfiles %}
-		<div align="center"><a href="https://elostat.com"><img id="logo" src="{% static "elostat.png" %}"></a>
+		<div align="center">
+			<a href="https://elostat.com">
+				<img id="logo" src="{% static "elostat.png" %}">
+			</a>
 		<hr width="50%">
 		<div class="main-table">
-			<div>
-				<span><a href="https://elostat.com/outcomes"><- Back</a></span>
-			</div>
-			{% for game in all_games %}
-			<div class="visitorteam">
-					<img class="team-logo" src="{% static "baseball.png" %}">
-					<h4>{{ game.team_away }}</h4>
-					<!-- <div><b>{{ game.prediction }}<b></div> -->
-				</div>
-				<div class="hometeam">
-					<img class="team-logo" src="{% static "baseball.png" %}">
-					<h4>{{ game.team_home }}</h4>
-				</div>
-					<div align="center"><b>{{ game.team_away }} at {{ game.team_home }} to {{ game.pred_away }}<b></div>
-				<div class="clearfix"></div><hr>
+			
+			<ul>
+			{% for game in all_games|dictsort:"date" %}
 				
-				<br>
+					<li class="list-games"><a href="https://elostat.com/outcomes/{{ game.date|date:"Ymd" }}">{{ game.date }} - {{ game.team_away}} vs {{ game.team_home}}</a</li>
+
 			{% endfor %}
+			</ul>
 		</div>
 	</div>
 </div>
-
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

@@ -18,8 +18,8 @@ from django.contrib import admin
 from outcomes import views
 
 urlpatterns = [
-    #url(r'^/outcomes', views.redirection, name='home'),
-    #url(r'^outcomes', views.homepage, name='outcomes'),
-    url(r'^outcomes/(?P<date_game>[0-9]+)$', views.homepage, name='detail'),
+    url(r'^$', views.homepage, name='home'),
+    url(r'^outcomes$', views.homepage, name='outcomes'),
+    url(r'^outcomes/(?P<date_game>[0-9]+)$', views.details, name='detail'),
     url(r'^admin/', admin.site.urls),
 ]

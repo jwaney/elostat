@@ -24,13 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'g06a-t_l6_23wr3@1$^xy56k0m6*9+vzmnyf&&@g9b*o_f*wq5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["elostat.herokuapp.com",
-                "elostat.com"
-                "192.168.56.10",
-                "0.0.0.0"
-]
+ALLOWED_HOSTS = ["elostat.com","192.168.56.10"]
 
 
 # Application definition
@@ -111,6 +107,13 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+# TEMPLATE_DIRS = (
+#    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+#    # Always use forward slashes, even on Windows.
+#    # Don't forget to use absolute paths, not relative paths.
+#    BASE_DIR + '../outcomes/templates',
+# )
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -125,8 +128,16 @@ USE_L10N = True
 USE_TZ = True
 
 
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+# Static asset configuration
+#BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
-STATIC_ROOT = "/static/"
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
