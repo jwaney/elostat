@@ -16,7 +16,7 @@ class TestSpider(scrapy.Spider):
 	def start_requests(self):
 		urls = []
 
-		while(self.today != "20170301"):
+		while(self.today != "20170831"):
 			urls.append('https://www.sportsbookreview.com/betting-odds/mlb-baseball/?date=%s' % self.today)
 			self.d = self.d + datetime.timedelta(days =-1)
 			self.day = self.d.day
