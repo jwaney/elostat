@@ -16,7 +16,7 @@ class TestSpider(scrapy.Spider):
 	def start_requests(self):
 		urls = []
 
-		while(self.today != "20170301"):
+		while(self.today != "20171008"):
 			urls.append('https://www.sportsbookreview.com/betting-odds/mlb-baseball/?date=%s' % self.today)
 			self.d = self.d + datetime.timedelta(days =-1)
 			self.day = self.d.day
@@ -48,7 +48,10 @@ class TestSpider(scrapy.Spider):
 				todaysGame[g]['home'] = response.xpath('//div[@id="%s"]//*[@class="team-name"]/@rel' % g).extract()[1]
 				for s in source:
 					c = "eventLineBook-" + g + '-' + str(s) + '-' + str(todaysGame[g]['away']) + '-2'
-					todaysGame[g]['away_' + str(s)] = response.xpath('//div[@id="%s"]/b/text()' % c).extract()[0]
+					print(c)
+					print(response.xpath('//div[@id="%s"]/b/text()' % c).extract()[0])
+					exit()
+					todaysGame[g]['away_' + str(s)] = response.xpath('//div[@id="%s"]/b/text()' % c).extract()[0]  
 					d = "eventLineBook-" + g + '-' + str(s) + '-' + str(todaysGame[g]['home']) + '-2'
 					todaysGame[g]['home_' + str(s)] = response.xpath('//div[@id="%s"]/b/text()' % d).extract()[0]
 				#response.xpath('//span[@id="score-3140283-o"]/text()').extract()
