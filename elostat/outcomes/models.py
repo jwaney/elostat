@@ -2,7 +2,7 @@ from django.db import models
 
 class OutCome(models.Model):
 	date		= models.DateField()
-	game_id		= models.IntegerField()
+	game_id		= models.IntegerField(primary_key=True)
 
 	team_away	= models.CharField(max_length=20)
 	team_home	= models.CharField(max_length=20)

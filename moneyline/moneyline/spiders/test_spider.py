@@ -11,12 +11,12 @@ class TestSpider(scrapy.Spider):
 	year = d.year
 	month = d.month
 	day = d.day
-	today = str(year) + str("%02d" % (month,)) + str("%02d" % (day - 1,))
-
+#	today = str(year) + str("%02d" % (month,)) + str("%02d" % (day - 1,))
+	today = "20171020"
 	def start_requests(self):
 		urls = []
 
-		while(self.today != "20170831"):
+		while(self.today != "20171019"):
 			urls.append('https://www.sportsbookreview.com/betting-odds/mlb-baseball/?date=%s' % self.today)
 			self.d = self.d + datetime.timedelta(days =-1)
 			self.day = self.d.day
