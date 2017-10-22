@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'elostat',
         'USER': 'elo',
         'PASSWORD': 'elo12345',
-        'HOST': 'localhost',
+        'HOST': '198.50.233.53',
         'PORT': '',
     }
 }
