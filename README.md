@@ -9,3 +9,4 @@ Change <year><month><day> at the end of the URL.
 Example: elostat.com/outcomes/20170909
          elostat.com/outcomes/20170921
 Dates back to: 20170317
+jwaney edit activity
