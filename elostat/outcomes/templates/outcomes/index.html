@@ -49,17 +49,21 @@
 		</style>
 	</head>
 	<body>
-		<div align="center"><a href="https://elotast.com"><img id="logo" src="https://elostat.com/elostat.png"></a>
+		{% load staticfiles %}
+		<div align="center"><a href="https://elostat.com"><img id="logo" src="{% static "elostat.png" %}"></a>
 		<hr width="50%">
 		<div class="main-table">
+			<div>
+				<span><a href="https://elostat.com/outcomes"><- Back</a></span>
+			</div>
 			{% for game in all_games %}
 			<div class="visitorteam">
-					<img class="team-logo" src="https://elostat.com/baseball.png">
+					<img class="team-logo" src="{% static "baseball.png" %}">
 					<h4>{{ game.team_away }}</h4>
 					<!-- <div><b>{{ game.prediction }}<b></div> -->
 				</div>
 				<div class="hometeam">
-					<img class="team-logo" src="https://elostat.com/baseball.png">
+					<img class="team-logo" src="{% static "baseball.png" %}">
 					<h4>{{ game.team_home }}</h4>
 				</div>
 					<div align="center"><b>{{ game.team_away }} at {{ game.team_home }} to {{ game.pred_away }}<b></div>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		.visitorteam {
+		width: 49%;
+		float: left;
+		text-align:center;
+		}
+		.hometeam{
+		width: 49%;
+		float: right;
+		text-align:center;
+		
+		}
+		.team-logo{
+		width:60px;
+		padding-top:10px;
+		}
+		.main-table{
+			width: 50%;
+
+		}
+		#left, #right{
+		float: left;
+		width: 49%;
+		}
+		
+		#right{
+		float: right;
+		width: 49%;
+		}
+		.left-side, .right-side{
+		border: 1px solid black;
+		margin: 10px;
+		}
+		.teamname{
+		line-height: 45px;
+		}
+		.rows{
+		float: left;
+		width:20%;
+		}
+		.clearfix{
+		clear: both;
+		}
+		#logo{
+			width: 150px;
+		}
+		.list-games{
+			line-height: 20px;
+			margin-bottom: 10px;
+			list-style:none;
+		}
+		#parag{
+			width: 400px;
+		}
+		.bug{
+			width: 300px;
+			margin-left: 20px;
+			float: left;
+		}
+		a {
+			text-decoration: none;
+			color: black;
+		}
+		a:visited{color:black;}
+		</style>
+	</head>
+	<body>
+		{% load staticfiles %}
+		<div align="center">
+			<a href="https://elostat.com">
+				<img id="logo" src="{% static "elostat.png" %}">
+			</a>
+		<hr width="50%">
+		<p id="parag">{{ message }}</p>
+
+		<hr width="50%">
+		<div class="main-table">
+			
+			<ul>
+			{% for game in all_games|dictsort:"date" %}
+				
+					<li class="list-games"><a href="https://elostat.com/outcomes/{{ game.date|date:"Ymd" }}">{{ game.date }}</a</li>
+
+			{% endfor %}
+			</ul>
+		</div>
+		<div class="bug"> <a href="https://github.com/krodik/elostat/issues"> Submit Bugs </a><div>
+		<div class="bug"><a href="https://github.com/krodik/elostat"> Github </a></div>
+	</div>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
