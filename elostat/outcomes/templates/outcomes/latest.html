@@ -51,6 +51,9 @@
 			margin-bottom: 10px;
 			list-style:none;
 		}
+		#parag{
+			width: 400px;
+		}
 		</style>
 	</head>
 	<body>
@@ -60,12 +63,15 @@
 				<img id="logo" src="{% static "elostat.png" %}">
 			</a>
 		<hr width="50%">
+		<p id="parag">{{ message }}</p>
+
+		<hr width="50%">
 		<div class="main-table">
 			
 			<ul>
 			{% for game in all_games|dictsort:"date" %}
 				
-					<li class="list-games"><a href="https://elostat.com/outcomes/{{ game.date|date:"Ymd" }}">{{ game.date }} - {{ game.team_away}} vs {{ game.team_home}}</a</li>
+					<li class="list-games"><a href="https://elostat.com/outcomes/{{ game.date|date:"Ymd" }}">{{ game.date }}</a</li>
 
 			{% endfor %}
 			</ul>

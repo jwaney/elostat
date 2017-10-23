@@ -31,11 +31,17 @@ def homepage(request):
 	day = d.day
 
 	filtered = []
+	dates = []
+	intro = "EloStat predicts the outcomes of Major League Baseball games. Games are ordered by date below. Predictions can be accessed by clicking a listed date below."
+
 	for g in range(0, len(all_games)):
 		if(all_games[g].date > d):
-			filtered.append(all_games[g])
+			if(all_games[g].date not in dates):
+				filtered.append(all_games[g])
+			dates.append(all_games[g].date)
 			template = loader.get_template('outcomes/latest.html')
 			context = {
 				'all_games': filtered,
+				'message': intro,
 			}
 	return HttpResponse(template.render(context, request))
