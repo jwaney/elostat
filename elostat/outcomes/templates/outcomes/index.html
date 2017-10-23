@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		.visitorteam {
+		width: 49%;
+		float: left;
+		text-align:center;
+		}
+		.hometeam{
+		width: 49%;
+		float: right;
+		text-align:center;
+		
+		}
+		.team-logo{
+		width:60px;
+		padding-top:10px;
+		}
+		.main-table{
+			width: 50%;
+		}
+		#left, #right{
+		float: left;
+		width: 49%;
+		}
+		
+		#right{
+		float: right;
+		width: 49%;
+		}
+		.left-side, .right-side{
+		border: 1px solid black;
+		margin: 10px;
+		}
+		.teamname{
+		line-height: 45px;
+		}
+		.rows{
+		float: left;
+		width:20%;
+		}
+		.clearfix{
+		clear: both;
+		}
+		#logo{
+			width: 150px;
+		}
+		</style>
+	</head>
+	<body>
+		{% load staticfiles %}
+		<div align="center"><a href="https://elostat.com"><img id="logo" src="{% static "elostat.png" %}"></a>
+		<hr width="50%">
+		<div class="main-table">
+			<div>
+				<span><a href="https://elostat.com/outcomes"><- Back</a></span>
+			</div>
+			{% for game in all_games %}
+			<div class="visitorteam">
+					<img class="team-logo" src="{% static "baseball.png" %}">
+					<h4>{{ game.team_away }}</h4>
+					<!-- <div><b>{{ game.prediction }}<b></div> -->
+				</div>
+				<div class="hometeam">
+					<img class="team-logo" src="{% static "baseball.png" %}">
+					<h4>{{ game.team_home }}</h4>
+				</div>
+					<div align="center"><b>{{ game.team_away }} at {{ game.team_home }} to {{ game.pred_away }}<b></div>
+				<div class="clearfix"></div><hr>
+				
+				<br>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
